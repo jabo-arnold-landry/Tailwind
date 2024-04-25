@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sample</title>
+   <script src="https://cdn.tailwindcss.com"></script>
+   <script>
+    tailwind.config = {
+        theme: {
+    extend: {
+      fontFamily:{
+        "jersey":["Jersey 25"],
+        "roboto":["Roboto"]
+      },
+    },
+  },
+    }
+  </script>
+
+<style type="text/tailwindcss">
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+    @layer utilities {
+      
+    }
+  </style>
+    <link rel="icon"  href="favicon.png">
+</head>
+<body class= "font-roboto select-none">
+    <div class="lg:grid grid-cols-2">
+        <div class="flex lg:hidden">
+            <img src="mobile.svg" alt="mobile" class="w-full">
+        </div>
+        <div class="mt-5 ml-10 col-span-1"><!--first section-->
+            <div class="text-blue-950 text-3xl font-bold lg:text-5xl">
+                <h1 class="">Stay updated!</h1>
+            </div>
+            <div class="pt-4  text-gray-600 first-letter:capitalize">
+                <p>join 60,000+ product managers receiving <span class="block">monthly updates on:</span></p>
+            </div>
+            <div class="pt-2  text-black first-letter:capitalize flex flex-col gap-1">
+                <img src="icon-list.svg" alt="icon" class="w-4 overflow-hidden gap-3 relative -left-5 top-6"><p>product discovery and building what <span class="block">matters</span></p>
+                <img src="icon-list.svg" alt="icon" class="w-4 overflow-hidden gap-3 relative -left-5 top-6"><p>measuring to ensure updates are a success</p>
+                <img src="icon-list.svg" alt="icon" class="w-4 overflow-hidden gap-3 relative -left-5 top-6"><p>and much more</p>
+            </div>
+     
+            <div class="pt-4">
+                <form>
+                    <label for="email" class="font-bold first-letter:capitalize">Email address</label>
+                    <span class="block ml-[40%] text-red-400 first-letter:capitalize" id="error"></span>
+                    <input type="text" id="email" class="block border border-gray-500 border-collapse mt-2 mb-3 w-[80%] lg:w-[70%] p-[10px] outline-gray-100 rounded-md  bg-white ">
+                    <div >
+                        <button class=" first-letter:capitalize font-bold bg-blue-950 text-white  p-[10px] w-[80%] lg:w-[70%] text-center rounded-md shadow-sm  cursor-pointer md:hover:opacity-70 transition-colors duration-150">subscribe to monthly newsletter</button>
+                    </div>
+                </form>
+            </div><br> <br> <br>
+        </div><!--end-->
+
+        <div class="block"><!--second part-->
+            <div class="hidden lg:flex col-span-1 mt-2 ml-14">
+                <img src="desktop.svg" alt="desktop" class="w-[80]  overflow-hidden">
+            </div>
+        </div>
+
+        <div class="hidden fixed top-[20%] left-[30%] z-10 p-10 lg: bg-white  rounded-xl shadow-2xl " id="box">
+            <img src="icon-list.svg" alt="icon" class="w-12">
+            <div>
+                <h2 class="pb-5 pt-5 text-4xl font-bold first-letter:capitalize">thanks for <span class="block">subscribing!</span></h2>
+            </div>
+            <div>
+                <p class="text-gray-500 first-letter:capitalize text-md">a confirmation has sent to
+                   <span class="font-bold block"></span>  <b>email. </b> please open it and click</span>
+                     <span class="block">the button to confirm your
+                         <span class="block ">subscription</span></span>
+                </p>
+                <button class=" mt-10 bg-blue-950 text-white p-[10px] rounded-lg w-full first-letter:capitalize  lg:mt-4 bg-gradient-to-r from-red-400 to-orange-500 shadow-xl" id="close"> dismiss message</button>
+            </div>
+            
+        </div>
+        <div class="hidden bg-white   fixed top-0 left-0 right-0 bottom-0 z-0  lg:bg-slate-700 " id="overlay"></div>
+    </div>
+    <script src="javascript.js"></script>
+</body>
+</html>
